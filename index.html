@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>📝 My Todo List</h1>
+            <p class="subtitle">Stay organized, stay productive</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="What needs to be done?"
+                maxlength="100"
+            >
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <!-- Task List Section -->
+        <div class="task-section">
+            <div class="task-header">
+                <h2>Your Tasks</h2>
+                <button id="downloadBtn" class="download-btn">📥 Download List</button>
+            </div>
+            
+            <!-- Task list will be dynamically inserted here -->
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will be loaded from the database -->
+            </ul>
+            
+            <!-- Empty state message -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>🎉 No tasks yet! Add your first task above.</p>
+            </div>
+        </div>
+
+        <!-- Task Statistics -->
+        <div class="stats">
+            <span id="totalTasks">Total: 0</span>
+            <span id="completedTasks">Completed: 0</span>
+        </div>
+    </div>
+
+    <!-- PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <!-- JavaScript file for application logic -->
+    <script src="script.js"></script>
+</body>
+</html>
